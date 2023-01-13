@@ -1,0 +1,11 @@
+input,
+my-badge {
+  display: inline-flex;
+}
+input {
+  display: inline-block;
+}
+
+input:hover {
+  border: 2px solid green;
+}
