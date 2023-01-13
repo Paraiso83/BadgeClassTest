@@ -10,7 +10,7 @@ export class BadgeComponent {
   @Input() message: Message;
 
   getClass(message: Message) {
-    console.log('getClass');
+    // console.log('getClass');
     if (message) {
       switch (message.severity) {
         case Severity.ERROR:
