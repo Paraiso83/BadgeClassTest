@@ -24,7 +24,6 @@ export class AppComponent {
 
   set text1(value: string) {
     this.message1 = { severity: Severity.ERROR, text: value };
-    console.log('value');
   }
   set text2(value: string) {
     this.message2 = { severity: Severity.INFO, text: value };
