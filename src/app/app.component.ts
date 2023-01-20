@@ -23,25 +23,41 @@ export class AppComponent {
   public message7: Message;
 
   set text1(value: string) {
-    this.message1 = { severity: Severity.ERROR, text: value };
+    const severity = this.getColor();
+    this.message1 = { severity, text: value };
   }
   set text2(value: string) {
-    this.message2 = { severity: Severity.INFO, text: value };
+    const severity = this.getColor();
+    this.message2 = { severity, text: value };
   }
   set text3(value: string) {
-    this.message3 = { severity: Severity.SUCCESS, text: value };
+    const severity = this.getColor();
+    this.message3 = { severity, text: value };
   }
   set text4(value: string) {
-    this.message4 = { severity: Severity.FATAL, text: value };
+    const severity = this.getColor();
+    this.message4 = { severity, text: value };
   }
   set text5(value: string) {
-    this.message5 = { severity: Severity.WARN, text: value };
+    const severity = this.getColor();
+    this.message5 = { severity, text: value };
   }
   set text6(value: string) {
     this.message6 = { severity: null, text: value };
   }
   set text7(value: string) {
     this.message7 = { severity: undefined, text: value };
+  }
+
+  readonly colors = [
+    Severity.ERROR,
+    Severity.WARN,
+    Severity.FATAL,
+    Severity.INFO,
+    Severity.SUCCESS,
+  ];
+  private getColor(): Severity {
+    return this.colors[Math.floor(Math.random() * 10) / 2];
   }
 
   @HostListener('mouseover', ['$event.target']) onHover() {
