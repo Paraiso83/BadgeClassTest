@@ -12,7 +12,7 @@ import { Message, Severity } from '../badge/message.interface';
   templateUrl: './time-counter.component.html',
   styleUrls: ['./time-counter.component.scss'],
 })
-export class TimeCounterComponent implements OnDestroy {
+export class TimeCounterComponent {
   counterMessage: Message;
   counterId: number;
   iterationCount: number = 0;
@@ -32,22 +32,18 @@ export class TimeCounterComponent implements OnDestroy {
         text: `Counter ${this.iterationCount}`,
         severity: Severity.WARN,
       } as Message;
+
+      /**
+       *  TODO: Return the current timestamp in the "counter"
+       */
+
       if (this.iterationCount > 100) {
         window.clearInterval(this.counterId);
-        /**
-         *  TODO: Return the current timestamp in the counter output;
-         */
-        this.counter.emit(new Date().getTime());
       }
     }, 1000);
   }
 
   /**
-   *  TODO: Define the counter so it can send information back to where the time-counter is used
+   *  TODO: Define a return value "counter" so it can send information back to where the time-counter is used
    */
-  @Output() counter = new EventEmitter<number>();
-
-  ngOnDestroy() {
-    window.clearInterval(this.counterId);
-  }
 }

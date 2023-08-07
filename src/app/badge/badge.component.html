@@ -1,1 +1,5 @@
-<div class="badge" [ngClass]="color" [innerHTML]="message?.text"></div>
+<div
+  class="badge"
+  [ngClass]="getClass(message)"
+  [innerHTML]="message?.text"
+></div>

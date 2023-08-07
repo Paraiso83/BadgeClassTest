@@ -78,15 +78,11 @@ export class AppComponent {
     return this._text6;
   }
   set text7(value: string) {
+    this._text7 = value;
     this.message7 = { severity: undefined, text: value };
   }
   get text7() {
     return this._text7;
-  }
-
-  counterHelper(counter: number) {
-    console.log('asdasdasdasdas', counter);
-    this._text7 = counter.toString();
   }
 
   readonly colors = [
@@ -101,6 +97,6 @@ export class AppComponent {
   }
 
   @HostListener('mouseover', ['$event.target']) onHover() {
-    //do something
+    //Nothing to do
   }
 }

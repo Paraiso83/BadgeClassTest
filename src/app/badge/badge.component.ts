@@ -7,25 +7,14 @@ import { Message, Severity } from './message.interface';
   styleUrls: ['./badge.component.scss'],
 })
 export class BadgeComponent {
-  private _message: Message;
-  color: string;
-
-  @Input()
-  set message(a: Message) {
-    this._message = a;
-    this.color = this.getClass(a);
-  }
-
-  get message() {
-    return this._message;
-  }
+  @Input() message: Message;
 
   /**
-   * TODO: Remove the console.log, evalute the issue that exists and find a solution
+   * TODO: Uncomment console.log, evalute the issue that exists and find a solution
    */
 
   getClass(message: Message) {
-    console.log(message);
+    // console.log(message)
     if (message) {
       switch (message.severity) {
         case Severity.ERROR:
