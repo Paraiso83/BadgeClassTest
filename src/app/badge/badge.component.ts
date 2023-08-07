@@ -4,7 +4,7 @@ import { Message, Severity } from './message.interface';
 @Component({
   selector: 'my-badge',
   templateUrl: './badge.component.html',
-  styleUrls: ['./badge.component.css'],
+  styleUrls: ['./badge.component.scss'],
 })
 export class BadgeComponent {
   @Input() message: Message;
