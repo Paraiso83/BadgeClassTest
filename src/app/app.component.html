@@ -1,35 +1,36 @@
 <section>
   <my-time-counter (counter)="(counterHelper)"></my-time-counter>
   <div>
-    <input type="text" readonly [ngModel]="lastText" id="lastText" />
-    <my-badge [message]=""></my-badge>
+    <input type="text" readonly [ngModel]="lastText" id="lastBadgeText" />
   </div>
-  <div>
-    <input type="text" [(ngModel)]="text1" id="text1" />
-    <my-badge [message]="message1"></my-badge>
-  </div>
-  <div>
-    <input type="text" [(ngModel)]="text2" id="text2" />
-    <my-badge [message]="message2"></my-badge>
-  </div>
-  <div>
-    <input type="text" [(ngModel)]="text3" id="text3" />
-    <my-badge [message]="message3"></my-badge>
-  </div>
-  <div>
-    <input type="text" [(ngModel)]="text4" id="text4" />
-    <my-badge [message]="message4"></my-badge>
-  </div>
-  <div>
-    <input type="text" [(ngModel)]="text5" id="text5" />
-    <my-badge [message]="message5"></my-badge>
-  </div>
-  <div>
-    <input type="text" [(ngModel)]="text6" id="text5" />
-    <my-badge [message]="message6"></my-badge>
-  </div>
-  <div>
-    <input type="text" [(ngModel)]="text7" id="text7" />
-    <my-badge [message]="message7"></my-badge>
-  </div>
+  <section id="container">
+    <div>
+      <input type="text" [(ngModel)]="text1" id="text1" />
+      <my-badge [message]="message1"></my-badge>
+    </div>
+    <div>
+      <input type="text" [(ngModel)]="text2" id="text2" />
+      <my-badge [message]="message2"></my-badge>
+    </div>
+    <div>
+      <input type="text" [(ngModel)]="text3" id="text3" />
+      <my-badge [message]="message3"></my-badge>
+    </div>
+    <div>
+      <input type="text" [(ngModel)]="text4" id="text4" />
+      <my-badge [message]="message4"></my-badge>
+    </div>
+    <div>
+      <input type="text" [(ngModel)]="text5" id="text5" />
+      <my-badge [message]="message5"></my-badge>
+    </div>
+    <div>
+      <input type="text" [(ngModel)]="text6" id="text5" />
+      <my-badge [message]="message6"></my-badge>
+    </div>
+    <div>
+      <input type="text" [(ngModel)]="text7" id="text7" />
+      <my-badge [message]="message7"></my-badge>
+    </div>
+  </section>
 </section>

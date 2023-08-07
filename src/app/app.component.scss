@@ -11,5 +11,8 @@ input:hover {
 }
 
 /**
-  * Change the text color of the even inputs to red
+  * TODO: Change the text color of the 5th input, inside the section container, to red ( max 2 min )
   */
+section#container div:nth-child(5) input {
+  color: red;
+}

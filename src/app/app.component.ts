@@ -24,18 +24,20 @@ export class AppComponent {
   lastText: string;
 
   constructor() {
-    this._text1 = 'text1';
+    this.text1 = 'text1';
     this._text2 = 'text2';
     this._text3 = 'text3';
     this._text4 = 'text4';
     this._text5 = 'text5';
     this._text6 = 'text6';
   }
+
   /**
-   * Find a solution to show in the first input (#lastText) the last message sent to a badge
+   * TODO: Find a solution to show in the first input (#lastBadgeText) the last message sent to a Badge
    */
 
   set text1(value: string) {
+    this._text1 = value;
     const severity = this.getColor();
     this.message1 = { severity, text: value };
   }
@@ -83,7 +85,7 @@ export class AppComponent {
   }
 
   counterHelper(counter: number) {
-    console.log('asdasdasdasdas',counter);
+    console.log('asdasdasdasdas', counter);
     this._text7 = counter.toString();
   }
 

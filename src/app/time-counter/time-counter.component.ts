@@ -1,4 +1,10 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  OnDestroy,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { Message, Severity } from '../badge/message.interface';
 
 @Component({
@@ -6,7 +12,7 @@ import { Message, Severity } from '../badge/message.interface';
   templateUrl: './time-counter.component.html',
   styleUrls: ['./time-counter.component.scss'],
 })
-export class TimeCounterComponent {
+export class TimeCounterComponent implements OnDestroy {
   counterMessage: Message;
   counterId: number;
   iterationCount: number = 0;
@@ -16,13 +22,20 @@ export class TimeCounterComponent {
       severity: Severity.WARN,
     } as Message;
 
+    /**
+     * TODO: Make sure that before the component is unloaded we clear the interval
+     */
     this.counterId = window.setInterval(() => {
-      console.log('abc');
+      console.log(this.counterId, this.iterationCount);
       this.iterationCount += 1;
+      this.counterMessage = {
+        text: `Counter ${this.iterationCount}`,
+        severity: Severity.WARN,
+      } as Message;
       if (this.iterationCount > 100) {
         window.clearInterval(this.counterId);
         /**
-         *  Return the current timestamp in the counter output;
+         *  TODO: Return the current timestamp in the counter output;
          */
         this.counter.emit(new Date().getTime());
       }
@@ -30,7 +43,11 @@ export class TimeCounterComponent {
   }
 
   /**
-   *  Define the counter so it can send information back to where the time-counter is used
+   *  TODO: Define the counter so it can send information back to where the time-counter is used
    */
   @Output() counter = new EventEmitter<number>();
+
+  ngOnDestroy() {
+    window.clearInterval(this.counterId);
+  }
 }
