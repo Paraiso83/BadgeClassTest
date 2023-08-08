@@ -1,5 +1,5 @@
 <section>
-  <!-- TODO: add the return "counter" and write the value into the #text7 -->
+  <!-- TODO: Handle the return information, from counter of my-time-counter and write the value into the input #text7 -->
   <my-time-counter></my-time-counter>
   <div>
     <input type="text" readonly [ngModel]="lastText" id="lastBadgeText" />
@@ -30,7 +30,7 @@
       <my-badge [message]="message6"></my-badge>
     </div>
     <div>
-      <input type="text" [(ngModel)]="text7" id="text7" />
+      <input type="text" readonly [(ngModel)]="text7" id="text7" />
       <my-badge [message]="message7"></my-badge>
     </div>
   </section>

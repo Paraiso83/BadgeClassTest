@@ -28,7 +28,7 @@ export class AppComponent {
     this._text2 = 'text2';
     this._text3 = 'text3';
     this._text4 = 'text4';
-    this._text5 = 'text5';
+    this.text5 = 'text5';
     this._text6 = 'text6';
   }
 
@@ -66,6 +66,7 @@ export class AppComponent {
 
   set text5(value: string) {
     const severity = this.getColor();
+    this._text5 = value;
     this.message5 = { severity, text: value };
   }
   get text5() {
@@ -93,7 +94,7 @@ export class AppComponent {
     Severity.SUCCESS,
   ];
   private getColor(): Severity {
-    return this.colors[Math.floor(Math.random() * 10) / 2];
+    return this.colors[Math.trunc(Math.random() * 5)];
   }
 
   @HostListener('mouseover', ['$event.target']) onHover() {

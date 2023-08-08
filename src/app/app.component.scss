@@ -1,7 +1,13 @@
-input,
+my-time-counter {
+  margin: 10px 10px;
+  display: block;
+}
+
 my-badge {
   display: inline-flex;
+  margin-left: 15px;
 }
+
 input {
   display: inline-block;
 }
@@ -10,6 +16,14 @@ input:hover {
   border: 2px solid green;
 }
 
+input:read-only {
+  background-color: lightgray;
+}
+
+div {
+  margin: 5px 10px;
+}
+
 /**
-  * TODO: Change the text color of the 5th input, inside the section container, to red
+  * TODO: Having into account the app\app.component.html, change the text color of the 5th input, inside the section #container, to the color red
   */

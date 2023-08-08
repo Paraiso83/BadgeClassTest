@@ -10,7 +10,7 @@ export class BadgeComponent {
   @Input() message: Message;
 
   /**
-   * TODO: Uncomment console.log, evalute the issue that exists and find a solution
+   * TODO: Having into account the app\badge\badge.component.html, uncomment console.log, open the console on the bottom of the preview page, evalute the issue that exists and find a solution for it
    */
 
   getClass(message: Message) {
