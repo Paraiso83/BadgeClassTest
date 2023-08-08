@@ -16,6 +16,11 @@ export class TimeCounterComponent {
   counterMessage: Message;
   counterId: number;
   iterationCount: number = 0;
+
+  /**
+   *  TODO: Define a return value "counter" so it can send information back to where the time-counter is used
+   */
+
   constructor() {
     this.counterMessage = {
       text: 'Counter',
@@ -42,8 +47,4 @@ export class TimeCounterComponent {
       }
     }, 1000);
   }
-
-  /**
-   *  TODO: Define a return value "counter" so it can send information back to where the time-counter is used
-   */
 }
