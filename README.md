@@ -1,8 +1,10 @@
+_Hint: The editor has auto complete on ctrl+space_
+
 This is a small test aplication, were we have a list of inputs, that when changed will show/update a badge on their right.
 
 ### There are a few TODOs in following files:
 
-(_Other files cam also be changed_)
+(_Other files can also be changed_)
 
 1. **app\\app.component.scss**
 
