@@ -10,5 +10,6 @@ import { TimeCounterComponent } from './time-counter/time-counter.component';
   imports: [BrowserModule, FormsModule],
   declarations: [AppComponent, BadgeComponent, TimeCounterComponent],
   bootstrap: [AppComponent],
+  providers: [],
 })
 export class AppModule {}
